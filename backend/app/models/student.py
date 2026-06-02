@@ -1,12 +1,11 @@
 """
 Model represents every student a tutor is teaching
 """
-from sqlalchemy import Column, Integer, string, Text, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, Text, ForeignKey, DateTime
 from sqlalchemy.orm import relationship #allows navigation across tables
 from sqlalchemy.sql import func
 from app.core.database import Base
 
-#
 class Student(Base):
     __tablename__ = "students"
 

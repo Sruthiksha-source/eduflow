@@ -12,9 +12,9 @@ class Session(Base):
     __tablename__= "sessions"
 
     id = Column(Integer, primary_key = True, index = True)
-    tutor_id = Column(Integer, ForeignKey("user.id"), nullable = False) #foreign key - links back to User
+    tutor_id = Column(Integer, ForeignKey("users.id"), nullable = False) #foreign key - links back to User
     student_id = Column(Integer, ForeignKey("students.id"), nullable=False) #foreign key - links back to Student
-    schedued_at = Column(DateTime(timezone=True), nullabe = False) #time required to book
+    scheduled_at = Column(DateTime(timezone=True), nullable = False) #time required to book
     duration_minutes = Column(Integer, default = 60) #default of 60 minutes
     hourly_rate = Column(Float, default = 0.0)
     status = Column(String, default = "scheduled") #tracks the lfecycle of the session - scheduled, completed and cancelled

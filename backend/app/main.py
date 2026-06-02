@@ -6,7 +6,13 @@ This python file is made to :
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware #imported the CORS software
-from app.core.database import engine, Base #
+from app.core.database import engine, Base
+
+#Imported all models so SQLAlcehmy registers it
+from app.models.user import User
+from app.models.student import Student
+from app.models.session import Session
+from app.models.invoice import Invoice
 
 Base.metadata.create_all(bind=engine)
 
