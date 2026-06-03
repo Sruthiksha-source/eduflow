@@ -38,7 +38,6 @@ This project uses the following conventions:
 - docs : Documentation
 - refractor : Code restruction
 
-
 ## Progress Log
 - [X] Week 1 - Project Setup, folder structure completed
 - [X] Week 1 - FastAPI live with health check endpoints
