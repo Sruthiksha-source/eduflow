@@ -11,6 +11,7 @@ eduflow/
 │   │   │   ├── __init__.py
 │   │   │   ├── config.py        # reads .env secrets using Pydantic
 │   │   │   └── database.py      # SQLAlchemy engine, session and Base
+|   |   |   └── security.py
 │   │   ├── models/
 │   │   │   ├── __init__.py      # registers all models for SQLAlchemy
 │   │   │   ├── user.py          # users table — tutor accounts
