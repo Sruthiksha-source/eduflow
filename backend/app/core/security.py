@@ -4,11 +4,11 @@ from passlib.context import CryptContext
 from app.core.config import settings
 
 #set up the bycrypt tool, deprecated allows any replacements to be upgraded automatically in passlib
-pwd_context = CryptContext(schemes = ["bycrypt"], deprecated = "auto")
+pwd_context = CryptContext(schemes = ["bcrypt"], deprecated = "auto")
 
 def hash_password(password: str) -> str:
     """
-    Converts plain text into hash (bycrypt - one way)
+    Converts plain text into hash (bcrypt - one way)
     """
     return pwd_context.hash(password)
 

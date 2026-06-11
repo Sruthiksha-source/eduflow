@@ -13,12 +13,21 @@ from app.models.user import User
 from app.models.student import Student
 from app.models.session import Session
 from app.models.invoice import Invoice
+from app.routes.auth import router as auth_router
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title = "Eduflow API", version = "1.0.0")
+app = FastAPI(title="EduFlow API", version="1.0.0")
 
-app.add_middleware (CORSMiddleware, allow_origins = ["http://localhost:5173"], allow_credentials = True, allow_methods=["*"], allow_headers = ["*"],)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(auth_router)
 
 @app.get("/")
 def root():
