@@ -43,7 +43,11 @@ This project uses the following conventions:
 - [X] Week 1 - Project Setup, folder structure completed
 - [X] Week 1 - FastAPI live with health check endpoints
 - [X] Week 1 - PostgreSQL connected and eduflow database made
-
+- [x] Week 1 — All 4 models created and tables live in PostgreSQL
+- [x] Week 1 — Deployed to Render with live URL
+- [x] Week 2 — Pydantic schemas with input validation
+- [x] Week 2 — bcrypt password hashing implemented
+- [x] Week 2 — JWT authentication working (register + login)
 ## Live API
 Base URL : https://eduflow-zjfu.onrender.com
 Docs : https://eduflow-zjfu.onrender.com/docs
