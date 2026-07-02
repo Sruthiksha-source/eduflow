@@ -40,14 +40,16 @@ This project uses the following conventions:
 - refractor : Code restruction
 
 ## Progress Log
-- [X] Week 1 - Project Setup, folder structure completed
-- [X] Week 1 - FastAPI live with health check endpoints
-- [X] Week 1 - PostgreSQL connected and eduflow database made
+- [x] Week 1 - Project Setup, folder structure completed
+- [x] Week 1 - FastAPI live with health check endpoints
+- [x] Week 1 - PostgreSQL connected and eduflow database made
 - [x] Week 1 — All 4 models created and tables live in PostgreSQL
 - [x] Week 1 — Deployed to Render with live URL
 - [x] Week 2 — Pydantic schemas with input validation
 - [x] Week 2 — bcrypt password hashing implemented
 - [x] Week 2 — JWT authentication working (register + login)
+- [x] Week 2 - Migrated database from Render to Supabase
+- [x] Week 2 - Protected endpoints with get_current_user
 ## Live API
 Base URL : https://eduflow-zjfu.onrender.com
 Docs : https://eduflow-zjfu.onrender.com/docs
