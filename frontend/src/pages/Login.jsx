@@ -57,7 +57,7 @@ const Login = () => {
     }
     return (
         //Tailwind CSS
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 to-olive-200 flex items-center justify-center">
             {/* Login Card */}
             <div className="bg-white p-8 rounded-x1 shadow-md w-full max-w-md">
                 {/*Header*/}
