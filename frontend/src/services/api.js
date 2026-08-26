@@ -11,7 +11,7 @@ const getToken = () => localStorage.getItem("token") //Stored here so user stays
 //Register a new user account
 //Send email, password, confirm_password
 export const registerUser = async (email, password, confirmPassword, fullName) => {
-    const repsonse = await fetch (`${API_URL}/auth/register`,{
+    const response = await fetch (`${API_URL}/auth/register`,{
         method: "POST",
         headers: {"Content-Type": "application/json"},
         //JSON.stringify converts JSON object -> string for FastAPI
@@ -27,21 +27,24 @@ export const registerUser = async (email, password, confirmPassword, fullName) =
     if (!response.ok){
         const error = await response.json()
         //error.detail is FastAPI's standard error format
-        throw new Error (error.detail)
+        const message = typeof error.detail === "string"
+            ? error.detail
+            :error.detail[0]?.msg || "Registration failed"
+        throw new Error (message)
     }
     return response.json() //returns the new user object
 }
 
 //Login - returns a JWT token
 export const loginUser = async (email, password) => {
-    const repsonse = await fetch (`${API_URL}/auth/login`,{
+    const response = await fetch (`${API_URL}/auth/login`,{
         method: "POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify({email, password})
     })
 
     if (!response.ok){
-        const error = await repsonse.json()
+        const error = await response.json()
         throw new Error(error.detail)
     }
 
@@ -54,13 +57,13 @@ export const loginUser = async (email, password) => {
 export const getCurrentUser = async() => {
     const response = await fetch (`${API_URL}/auth/me`,{
         method: "GET",
-        header: {
-            "Content_Type" : "application/json",
+        headers: {
+            "Content-Type" : "application/json",
             //Bearer Token tells FastAPI user detail
             "Authorization": `Bearer ${getToken()}`
         }
     })
-    if (!repsonse.ok){
+    if (!response.ok){
         //Token expired - need to login in again
         throw new Error("Not authenticated")
     }

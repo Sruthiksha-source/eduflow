@@ -57,7 +57,7 @@ const Login = () => {
     }
     return (
         //Tailwind CSS
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 to-olive-200 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-200 flex items-center justify-center">
             {/* Login Card */}
             <div className="bg-white p-8 rounded-x1 shadow-md w-full max-w-md">
                 {/*Header*/}
@@ -113,8 +113,8 @@ const Login = () => {
                         disabled ={isLoading}
                         className="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50">
                         
-                            {isLoading ? "Signing in...": "Sign in"}
-                        </button>
+                        {isLoading ? "Signing in...": "Sign in"}
+                    </button>
                 </form>
                 
                 {/* Link to register page */}
