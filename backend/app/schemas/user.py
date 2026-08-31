@@ -13,6 +13,7 @@ class UserCreate(BaseModel):
     password : str
     confirm_password : str
     full_name : str
+    is_tutor: bool = True #defaults to tutor if not provided - student needs tutor to use this platform
 
     #need to make sure password is valid
     #1. password == confirm_password
@@ -22,7 +23,7 @@ class UserCreate(BaseModel):
     #use pydantic validators to check the password
     @field_validator ("password")
     @classmethod
-    def pasword_strength(cls, password): #check values with cls
+    def password_strength(cls, password): #check values with cls
         if len(password)< 8 :
             raise ValueError ("Password must be atleast 8 characters long")
         if not any (char.isdigit() for char in password):

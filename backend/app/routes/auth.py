@@ -34,7 +34,8 @@ def register(user_data: UserCreate, db: Session = Depends(get_db)):
     new_user = User(
         email=user_data.email,
         hashed_password=hashed,
-        full_name=user_data.full_name
+        full_name=user_data.full_name,
+        is_tutor = user_data.is_tutor
     )
 
     # Save to database

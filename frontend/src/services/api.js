@@ -10,7 +10,7 @@ const getToken = () => localStorage.getItem("token") //Stored here so user stays
 //AUTH
 //Register a new user account
 //Send email, password, confirm_password
-export const registerUser = async (email, password, confirmPassword, fullName) => {
+export const registerUser = async (email, password, confirmPassword, fullName, role) => {
     const response = await fetch (`${API_URL}/auth/register`,{
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -19,7 +19,8 @@ export const registerUser = async (email, password, confirmPassword, fullName) =
             email,
             password,
             confirm_password: confirmPassword,
-            full_name: fullName
+            full_name: fullName,
+            is_tutor: role === "tutor"
         })
     })
 
