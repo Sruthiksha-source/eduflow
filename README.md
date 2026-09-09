@@ -128,9 +128,9 @@ This project uses the following conventions:
 - refractor : Code restruction
 
 ## Progress Log
-- [x] Week 1 - Project Setup, folder structure completed
-- [x] Week 1 - FastAPI live with health check endpoints
-- [x] Week 1 - PostgreSQL connected and eduflow database made
+- [x] Week 1 — Project Setup, folder structure completed
+- [x] Week 1 — FastAPI live with health check endpoints
+- [x] Week 1 — PostgreSQL connected and eduflow database made
 - [x] Week 1 — All 4 models created and tables live in PostgreSQL
 - [x] Week 1 — Deployed to Render with live URL
 - [x] Week 2 — Pydantic schemas with input validation
