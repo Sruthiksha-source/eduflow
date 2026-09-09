@@ -1,5 +1,5 @@
 //Base URL for all API calls - change this one line when deploying
-const API_URL = "http://localhost:8001"
+const API_URL = import.meta.env.VITE_API_URL || "https://localhost:8001"
 
 //Gets the JWT token from browser storage
 //localStorage persists even when the page is refreshed
