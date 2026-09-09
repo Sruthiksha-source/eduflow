@@ -136,8 +136,8 @@ This project uses the following conventions:
 - [x] Week 2 — Pydantic schemas with input validation
 - [x] Week 2 — bcrypt password hashing implemented
 - [x] Week 2 — JWT authentication working (register + login)
-- [x] Week 2 - Migrated database from Render to Supabase
-- [x] Week 2 - Protected endpoints with get_current_user
+- [x] Week 2 — Migrated database from Render to Supabase
+- [x] Week 2 — Protected endpoints with get_current_user
 - [x] Week 2 — Swagger bearer auth configured
 - [x] Week 2 — Database migrated from Render to Supabase
 - [x] Week 2 — Row Level Security enabled on all Supabase tables
