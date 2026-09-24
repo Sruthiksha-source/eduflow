@@ -1,1 +1,23 @@
 @import "tailwindcss";
+@theme {
+    --font-serif: Georgia, "Times New Roman", serif;
+
+    --color-brand-50:  #f1f6f2;
+    --color-brand-100: #dde9e0;
+    --color-brand-200: #bcd4c2;
+    --color-brand-300: #8fb79a;
+    --color-brand-400: #5f9570;
+    --color-brand-500: #3d7852;
+    --color-brand-600: #2d5f3f;
+    --color-brand-700: #234b32;
+    --color-brand-800: #1c3c29;
+    --color-brand-900: #152e20;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
